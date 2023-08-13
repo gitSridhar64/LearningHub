@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>get courses</title>
+		<link th:href="@{/CSS/style.css}" rel="stylesheet" />
+	</head>
+	<body>
+				<header>
+			<h2 class="logo">LearningHUB<br><p>The best learning station</p></h2>
+			<nav class="navigation">
+				<a href="/aboutus">About us</a>
+				<button class="btn" onclick="window.location.href = '/learninghub'">HOME</button>
+				<button class="btn" onclick="window.location.href = '/trainerHome'">Trainerhome</button>
+			</nav>
+			
+		</header>
+		<div class="wrapper1">
+			<div class="form-login">
+			<h2>Courses </h2>
+		<table class="table">
+				<thead>
+					<tr>
+						<th>Course Id</th>
+						<th>Course Name</th>
+						<th>Course Price</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="clist: ${CourseList}">
+						<td th:text="${clist.courseId}" />
+						<td th:text="${clist.courseName}" />
+						<td th:text="${clist.coursePrice}" />
+					</tr>
+				</tbody>
+				
+			</table>
+			</div>
+		</div>
+		<footer>
+        <div class="footer-content">
+            <p>LearningHub. All rights reserved.</p>
+            <p>Contact: learninhub123@example.com</p>
+			<p>+91 9051 XXXXXX</p>
+        </div>
+    </footer>
+	</body>
+</html>

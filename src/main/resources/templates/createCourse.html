@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>create course</title>
+		<link th:href="@{/CSS/style.css}" rel="stylesheet" />
+	</head>
+	<body>
+		<header>
+			<h2 class="logo">LearningHUB<br><p>The best learning station</p></h2>
+			<nav class="navigation">
+				<button class="btn" onclick="window.location.href = '/learninghub'">HOME</button>
+				<button class="btn" onclick="window.location.href = '/trainerHome'">Trainerhome</button>
+			</nav>
+		</header>
+		
+	<form action="/addCourse" method="post">	
+		<div class="wrapper">
+			
+	 <div class="form-login">
+		 <h2>Add Course</h2><br>
+    
+    <div class="inputbox1">
+		<span class="icon"></span>
+      <input type="courseId" name="courseId" placeholder="Enter courseId here">
+      <label>Course Id</label>
+    </div>
+
+    
+     <div class="inputbox1">
+      <input type="courseName" class="form-control" name="courseName" placeholder=" Enter courseName here">
+    	<label>Course Name</label>
+    </div>
+    
+     <div class="inputbox1">
+      <input type="coursePrice" class="form-control" name="coursePrice" placeholder=" Enter coursePrice here">
+    	<label>Course Price</label>
+    </div>
+
+<button type="submit" class="btn">Create</button>
+    </div>
+  </div> 
+</form>
+<footer>
+        <div class="footer-content">
+            <p>LearningHub. All rights reserved.</p>
+            <p>Contact: learninhub123@example.com</p>
+			<p>+91 9051 XXXXXX</p>
+        </div>
+    </footer>
+	</body>
+</html>

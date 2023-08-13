@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>login</title>
+		<link th:href="@{/CSS/style.css}" rel="stylesheet" />
+	</head>
+	<body>
+		<header>
+			<h2 class="logo">LearningHUB<br><p>The best learning station</p></h2>
+			<nav class="navigation">
+				<button class="btn" onclick="window.location.href = '/learninghub'">HOME</button>
+				<button class="btn" onclick="window.location.href = '/register'">REGISTER</button>
+			</nav>
+		</header>
+		
+		<br>
+		<form action="/login" method="post">
+ <div class="wrapper">
+	 <div class="form-login">
+		 <h2>Login Page</h2><br>
+    
+    <div class="inputbox">
+		<span class="icon"></span>
+      <input type="email" name="inputEmail" placeholder="Enter Email here">
+      <label>Email</label>
+    </div>
+
+    <div class="inputbox">
+      <input type="password" class="form-control" name="inputPassword" placeholder=" Enter Password here">
+    	<label>Password</label>
+    </div>
+    <div class="forgot">
+	<a href="#">Forgot password???</a>
+</div><br>
+<button type="submit" class="btn">LOGIN</button>
+    </div>
+  </div> 
+</form>
+<footer>
+        <div class="footer-content">
+            <p>LearningHub. All rights reserved.</p>
+            <p>Contact: learninhub123@example.com</p>
+			<p>+91 9051 XXXXXX</p>
+        </div>
+    </footer>
+	</body>
+</html>

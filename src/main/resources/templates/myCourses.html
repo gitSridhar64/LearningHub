@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>my course</title>
+<link th:href="@{/CSS/style.css}" rel="stylesheet" />
+</head>
+<body>
+<header>
+			<h2 class="logo">LearningHUB<br><p>The best learning station</p></h2>
+			<nav class="navigation">
+				<a href="/aboutus">About us</a>
+				<button class="btn" onclick="window.location.href = '/learninghub'">HOME</button>
+				<button class="btn" onclick="window.location.href = '/studentHome'">Studenthome</button>
+			</nav>
+			</header>
+			<form action="/getMyCourseDetails" method="post">
+			
+							 <div class="form-group row">
+				    <label for="email" class="col-sm-2 col-form-label"><h3>Enter Your Registered Email Id</h3></label>
+				    <div class="col-sm-10"><br>
+				      <input type="email" class="email" name="email" placeholder="email">
+				    </div><br>
+				    <button type="submit" class="btn btn-primary">SUBMIT</button>
+				    </div>
+    		</form>
+    <div class="wrapper1">
+			<div class="form-login">
+			<h2>My Courses </h2>
+		<table class="table">
+				<thead>
+					<tr>
+						<th>Course Id</th>
+						<th>Course Name</th>
+						<th>Course Price</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="clist: ${coursedata}">
+						<td th:text="${clist.courseId}" />
+						<td th:text="${clist.courseName}" />
+						<td th:text="${clist.coursePrice}" />
+					</tr>
+				</tbody>
+				
+			</table>
+			</div>
+		</div>
+    
+    
+    
+<footer>
+        <div class="footer-content">
+            <p>LearningHub. All rights reserved.</p>
+            <p>Contact: learninhub123@example.com</p>
+			<p>+91 9051 XXXXXX</p>
+        </div>
+    </footer>
+</body>
+</html>

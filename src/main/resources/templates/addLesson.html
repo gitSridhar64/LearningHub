@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>addLesson</title>
+		<link th:href="@{/CSS/style.css}" rel="stylesheet" />
+	</head>
+	<body>
+		<header>
+			<h2 class="logo">LearningHUB<br><p>The best learning station</p>
+			</h2>
+			<nav class="navigation">
+				<a href="/aboutus">About us</a>
+				<button class="btn" onclick="window.location.href = '/learninghub'">Home</button>
+				<button class="btn" onclick="window.location.href = '/trainerHome'">Trainerhome</button>
+			</nav>
+		</header>
+		
+		<div class="wrapper1">
+							<div class="form-login">
+						<form action="/addLesson" method="post">
+							
+							<h2>Lesson adding</h2><br>
+				    
+				    <div class="inputbox1">
+				      <input type="courseId" name="courseId" placeholder="Enter courseId here">
+				      <label>Course Id</label>
+				    </div>
+					<div class="inputbox1">
+				      <input type="lessonId" name="lessonId" placeholder="Enter lessonId here">
+				      <label>Lesson Id</label>
+				    </div>
+				    <div class="inputbox1">
+				      <input type="lessonName" name="lessonName" placeholder="Enter lessonName here">
+				      <label>Lesson Name</label>
+				    </div>
+				    <div class="inputbox1">
+				      <input type="lessonTopics" name="lessonTopics" placeholder="Enter lessonTopics here">
+				      <label>Lesson Topics</label>
+				    </div>
+				   	<div class="inputbox1">
+				      <input type="videoLink" name="videoLink" placeholder="Enter videoLink here">
+				      <label>Video Link</label>
+				    </div>	
+				      <button type="submit" class="btn btn-primary">SUBMIT</button>
+				</div>
+				</form>
+	</div>
+
+<footer>
+        <div class="footer-content">
+            <p>LearningHub. All rights reserved.</p>
+            <p>Contact: learninhub123@example.com</p>
+			<p>+91 9051 XXXXXX</p>
+        </div>
+    </footer>
+	</body>
+</html>

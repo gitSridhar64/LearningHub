@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>my lesson</title>
+<link th:href="@{/CSS/style.css}" rel="stylesheet" />
+</head>
+<body>
+					<header>
+			<h2 class="logo">LearningHUB<br><p>The best learning station</p></h2>
+			<nav class="navigation">
+				<a href="/aboutus">About us</a>
+				<button class="btn" onclick="window.location.href = '/learninghub'">HOME</button>
+				<button class="btn" onclick="window.location.href = '/studentHome'">Studenthome</button>
+			</nav>
+			</header>
+			
+			
+<form action="/searchLesson" method="post">
+	<div class="new">
+		    <h3>Enter the lssonId</h3>
+		    <div class="col-sm-10"><br>
+		      		<input type="lessonId" name="lessonId" placeholder="lessonId">
+		    </div><br>
+		    <button type="submit" class="btn btn-primary">SUBMIT</button>
+ 	</div>
+</form>
+    
+    
+		<table class="table1">
+			
+				<thead>
+					<tr>
+						
+						<th>Lesson ID</th>
+						<th>Lesson Name</th>
+						<th>Topics</th>
+						<th>Course Name</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="Lesson: ${Lesson1}">
+						<td th:text="${Lesson.lessonId}" />
+						<td th:text="${Lesson.lessonName}" />
+						<td th:text="${Lesson.topics}" />
+						<td th:text="${Lesson.course.courseName}" />
+					</tr>
+				</tbody>
+				
+			</table>
+			<br>
+			
+			
+<div class="respond">
+
+  <form action="/addComment" method="post" >
+
+    <textarea name="comment" id="comment" rows="10" tabindex="4"  required="required" placeholder="enter your comment"></textarea>
+
+    <input type="hidden" name="comment_post_ID" value="1" id="comment_post_ID" />
+    <input name="submit" type="submit" value="Submit comment" />
+
+  </form>
+
+</div>
+
+<form action="searchLesson">
+	<div class="random">
+				<table class="table">
+			
+				<thead>
+					<tr>
+						
+						<th>Comments</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="Comment: ${allcomments}">
+						<td th:text="${Comment.comment}" />
+					</tr>
+				</tbody>
+				
+			</table>
+			
+</form>
+
+</body>
+</html>

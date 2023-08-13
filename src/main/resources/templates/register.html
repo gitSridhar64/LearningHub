@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>register</title>
+		<link th:href="@{/CSS/style.css}" rel="stylesheet" />
+	</head>
+	<body>
+		<header>
+			<h2 class="logo">LearningHUB<br><p>The best learning station</p></h2>
+			<nav class="navigation">
+				<button class="btn" onclick="window.location.href = '/learninghub'">HOME</button>
+				<button class="btn" onclick="window.location.href = '/login'">LOGIN</button>
+			</nav>
+		</header>
+		<div class="wrapper1">
+							<div class="form-login">
+						<form action="/addUser" method="post">
+							
+							<h2>Registration Page</h2><br>
+				    
+				    <div class="inputbox1">
+				      <input type="firstname" name="firstname" placeholder="Enter firstname here">
+				      <label>Firstname</label>
+				    </div>
+					<div class="inputbox1">
+				      <input type="lastname" name="lastname" placeholder="Enter lastname here">
+				      <label>Lastname</label>
+				    </div>
+				    <div class="inputbox1">
+				      <input type="email" name="inputEmail3" placeholder="Enter email here">
+				      <label>Email</label>
+				    </div>
+				    <div class="inputbox1">
+				      <input type="password" name="inputPassword3" placeholder="Enter password here">
+				      <label>Password</label>
+				    </div>
+				       		  
+						  
+						  <div class="inputbox1">
+						  <select name="role" id="cars">
+						    <option value="Student">Student</option>
+						    <option value="Trainer">Trainer</option>
+						  </select>
+				        <label for="role">Role</label>
+						  </div>
+						  
+						  
+						<div class="inputbox1">
+				      <input type="mobile" name="mobile" placeholder="Enter mobile here">
+				      <label>Mobile Number</label>
+				    </div>	
+				      <button type="submit" class="btn btn-primary">SUBMIT</button>
+				</div>
+</form>
+
+			</div>
+			<footer>
+        <div class="footer-content">
+            <p>LearningHub. All rights reserved.</p>
+            <p>Contact: learninhub123@example.com</p>
+			<p>+91 9051 XXXXXX</p>
+        </div>
+    </footer>
+	</body>
+</html>
